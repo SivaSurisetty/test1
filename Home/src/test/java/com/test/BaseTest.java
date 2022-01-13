@@ -19,12 +19,16 @@ public class BaseTest {
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\Tools\\96\\chromedriver.exe");
 		driver = new ChromeDriver();
+		wait=new WebDriverWait(driver, 60);
+		driver.manage().window().maximize();
+		
+		pageParent = new PageParent(driver, wait);
 	}
 	
 	@AfterMethod
 	public void tearDown() {
 		
-		driver.quit();
+//		driver.quit();
 	}
 	
 

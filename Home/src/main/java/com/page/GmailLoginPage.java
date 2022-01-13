@@ -15,12 +15,13 @@ public class GmailLoginPage extends BasePage {
 	By pwd = By.xpath("//input[@type='password']");
 	By next = By.xpath("//span[text()='Next']");
 	
-	public void login(String User, String Pwd) {
+	public void login(String User, String Pwd) throws InterruptedException {
 		
 		driver.get("https://gmail.com/");
 		waitforElementVisible(userId);
 		doSendKeys(userId, User);
 		doClick(next);
+		Thread.sleep(5000);
 		doSendKeys(pwd, Pwd);
 		doClick(next);
 		
