@@ -29,6 +29,7 @@ public class GmailLoginTest extends BaseTest {
 	public void login(String User, String Pwd) throws InterruptedException {
 //		User = "siva.appc@gmail.com";
 //		Pwd = "B4itfun@";
+		//test
 		pageParent.getInstance(GmailLoginPage.class).login(User, Pwd);
 	}
 }
